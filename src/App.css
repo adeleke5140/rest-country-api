@@ -9,11 +9,10 @@ body{
   
 }
 
-.Loading-text{
-text-align: center;
-display: flex;
-    justify-content: center;
-    margin: 211px;
+.loading-img{
+display: grid;
+    margin: 200px auto;
+    width: 7%;
 }
 
 #top{
@@ -43,11 +42,13 @@ display: flex;
 .light-mode{
 background-color:  hsl(0, 0%, 98%);
 color:  hsl(200, 15%, 8%);
+transition: 0.3;
 }
 
 .dark-mode{
 background-color: hsl(207, 26%, 17%);
 color: hsl(0, 0%, 100%);
+transition: 0.3;
 }
 
 #input-search{
@@ -130,7 +131,7 @@ article h3{
 }
 
 
-.little-space{
+#second-part{
   margin-top: 20px;
   margin-bottom: 20px;
 }

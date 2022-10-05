@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import useLocalStorage from './Hooks/useLocalStorage'
 import './App.css'
 import Countries from './components/Countries'
 import CountryInfo from './components/CountryInfo'
@@ -8,18 +9,18 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [theme, setTheme] = useState(false)
-  const [searchCountry, setSearchCountry] = useState('')
+  const [theme, setTheme] = useLocalStorage('time',false)
+  const [searchCountry, setSearchCountry] = useLocalStorage('date','')
   const [query, SetQuery] = useState([])
-  const  [imageTheme, setImageTheme] = useState(true)
+  const  [imageTheme, setImageTheme] = useLocalStorage('theme',true)
 
   return (
     <div className="App">
    <Top  theme={theme} setTheme={setTheme}  imageTheme={imageTheme} setImageTheme={setImageTheme} />
 
-  
      <Router>
     
+
      
        
       <Routes>
@@ -32,9 +33,9 @@ function App() {
       </>
     }/>
      
-      
+       
 
-      <Route path='/info/:ccn3' element={ <CountryInfo theme={theme} imageTheme={imageTheme} setImageTheme={setImageTheme} query={query} />} />
+      <Route path='/info/:common/:population/:region/:capital/:subregion' element={ <CountryInfo theme={theme} imageTheme={imageTheme} setImageTheme={setImageTheme}  />} />
      
     
 

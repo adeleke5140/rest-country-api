@@ -3,8 +3,8 @@ import lightMode from '/src/images/light_mode_FILL0_wght400_GRAD0_opsz48.png'
 import darkMode from '/src/images/dark_mode_FILL0_wght400_GRAD0_opsz48.png'
 
 function Top({theme, setTheme, imageTheme, setImageTheme}) {
-    const [lightThemeBtn, setlightThemeBtn] = useState(false)
-    const [darkThemeBtn, setdarkThemeBtn] =useState(true)
+    const [lightThemeBtn, setlightThemeBtn] = useState(true)
+    const [darkThemeBtn, setdarkThemeBtn] =useState(false)
 
     const darkToggle =()=>{
         setTheme(!theme)
