@@ -7,7 +7,7 @@ function CountryInfo() {
    const navigate = useNavigate();
 
 
-  let {population, region, common,  capital, subregion } = useParams();
+  let {population, region, name, native, borders, subregion, languages, capital, currencies, flags} = useParams();
 
   
   
@@ -25,13 +25,13 @@ function CountryInfo() {
 
 <div id="Country-info">
 
-  {/* <img src={flag} alt="" /> */}
+  {/* <img src={flags} alt="" /> */}
 
-<h2>{common}</h2>
+<h2>{name}</h2>
 
 <div id="first-part">
   
-<h4>Native Name: </h4>
+<h4>Native Name: <span> {native} </span>  </h4>
 <h4> Population: <span>{population}</span> </h4>
 <h4> Region: <span>{region}</span> </h4>
 <h4>Sub Region: <span>{subregion}</span> </h4>
@@ -42,8 +42,8 @@ function CountryInfo() {
 <div id="second-part">
 
   <h4>Top Level Domain:</h4>
-  <h4>Currencies:</h4>
-  <h4>Languages:</h4>
+  <h4>Currencies: {currencies} </h4>
+  <h4>Languages: {languages} </h4>
 
 </div>
 
@@ -51,9 +51,7 @@ function CountryInfo() {
   <h3>Border Countries:</h3>
 
 <div className="borders">
-  <div>Country1</div>
-  <div>Country2</div>
-  <div>Country3</div>
+  <div>{borders}</div>
 </div>
 
 </div>

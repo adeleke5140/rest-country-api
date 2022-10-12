@@ -35,7 +35,7 @@ function App() {
      
        
 
-      <Route path='/info/:common/:population/:region/:capital/:subregion' element={ <CountryInfo theme={theme} imageTheme={imageTheme} setImageTheme={setImageTheme}  />} />
+      <Route path='/info/:name/:population/:region/:capital/:subregion/:languages/:native/:currencies/:borders' element={ <CountryInfo theme={theme} imageTheme={imageTheme} setImageTheme={setImageTheme}  />} />
      
     
 
