@@ -117,17 +117,21 @@ article h3{
 
 .go-back{
   display: flex;
-    width: 40%;
+  width: 100px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  align-items:center;
+  justify-content:center;
+  margin-left: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.go-back img{
+  width: 30px;
 }
 
 .go-back  .imageLight-mode{
   filter: invert(100%) sepia(0%) saturate(78485) hue-rotate(196deg) brightness(106%) contrast(100%);
-}
-
-
-.go-back h3{
-  margin-left: 10px;
 }
 
 
@@ -139,13 +143,18 @@ article h3{
 
 .borders{
   display: flex;
-  justify-content: space-around;
   text-align: left;
-    grid-gap: 3.5em;
-    margin: auto;
+ 
+  list-style: none;
+}
+
+.borders > li {
+  margin-right: 2em;
 }
 
 .borders div{
   padding: 4px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+
